@@ -1,16 +1,18 @@
 import './App.css';
-import Header from './Components/Header';
-import Nav from './Components/Nav';
-import Main from './Components/Main';
-import Footer from './Components/Footer';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './Components/Layout/Layout';
+import Menu from './Components/Menu/Menu';
+import Chefs from './Components/Chefs/Chefs';
 
 function App() {
   return (
     <>
-      <Header />
-      <Nav />
-      <Main />
-      <Footer />
+    <Routes>
+      <Route path='/' element={<Layout />}>
+        <Route path='menu' element={<Menu />} />
+        <Route path='chefs' element={<Chefs/>} />
+      </Route>
+    </Routes>
     </>
   );
 }
