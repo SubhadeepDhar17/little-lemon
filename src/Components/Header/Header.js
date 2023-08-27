@@ -15,6 +15,9 @@ const Header = () => {
     <>
       <ul>
         <li>
+          <button>==</button>
+        </li>
+        <li>
           <NavLink to="/">
             <img src={Logo}/>
           </NavLink>
@@ -26,6 +29,9 @@ const Header = () => {
             <li><NavLink to="chefs">Chefs</NavLink></li>
             <li><NavLink to="specials">Specials</NavLink></li>
           </div>
+        </li>
+        <li>
+          <button>|||</button>
         </li>
       </ul>
     </>

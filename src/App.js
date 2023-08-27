@@ -7,12 +7,12 @@ import Chefs from './Components/Chefs/Chefs';
 function App() {
   return (
     <>
-    <Routes>
-      <Route path='/' element={<Layout />}>
-        <Route path='menu' element={<Menu />} />
-        <Route path='chefs' element={<Chefs/>} />
-      </Route>
-    </Routes>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route path='menu' element={<Menu />} />
+          <Route path='chefs' element={<Chefs/>} />
+        </Route>
+      </Routes>
     </>
   );
 }
