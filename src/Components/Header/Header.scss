@@ -1,15 +1,51 @@
-@media screen and (min-width: 600px) {
-    ul {
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    div {
         display: flex;
-        justify-content: space-between;
-        list-style: none;
-        div {
-            display: flex;
-            margin-left: 20px;
-            margin-right: 30px;
-            li {
-                margin: 10px 20px;
-            }
+        margin-left: 20px;
+        margin-right: 30px;
+        li {
+            margin: 10px 20px;
+        }
+    }
+    .menu {
+        position: absolute;
+        float: left;
+        flex-direction: column;
+        background-color: aqua;
+        text-align: center;
+    }
+    .menuDisplay.inactive {
+        visibility: 0;
+        transform: translateX(0px);
+        transition: 1s ease;
+    }
+    .menuDisplay.active {
+        transform: translateX(0px);
+        transition: 1s ease;
+    }
+    @media screen and (min-width: 1200px) {
+        .menu {
+            position: static;
+            flex-direction: row;
+            background-color: bisque;
+            height: 0vh;
+            width: 0vw;
+        }
+        .menuDisplay.inactive {
+            visibility: visible;
+            transform: translateX(0px);
+        }
+        .menuDisplay.active {
+            transform: translateX(0px);
+        }
+        button {
+            visibility: hidden;
         }
     }
 }
+
+// if device width > 600px
+

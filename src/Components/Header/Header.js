@@ -8,22 +8,25 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const Header = () => {
 
-  const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
+  const [menuDisplay, setMenuDisplay] = useState(false);
 
   return (
     <>
       <ul>
         <li>
-          <button>==</button>
+          <div className='hamburger' onClick={() => {
+            setMenuDisplay(!menuDisplay)
+          }}>
+            <button>==</button>
+          </div>
         </li>
-        <li>
+        <li className='logo'>
           <NavLink to="/">
             <img src={Logo}/>
           </NavLink>
         </li>
         <li>
-          <div className='menu'>
+          <div className={`menu menuDisplay ${menuDisplay ? 'active' : 'inactive'}`}>
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="menu">Menu</NavLink></li>
             <li><NavLink to="chefs">Chefs</NavLink></li>
