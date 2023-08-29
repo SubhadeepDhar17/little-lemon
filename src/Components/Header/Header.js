@@ -20,6 +20,14 @@ const Header = () => {
       name: 'Chefs',
       to: '/chefs'
     },
+    {
+      name: 'Specials',
+      to: '/specials'
+    },
+    {
+      name: 'Book A Table',
+      to: '/specials'
+    },
   ]
   const MenuDisplay = Menu.map((list) => <li><NavLink to={list.to}>{list.name}</NavLink></li>);
 
@@ -29,7 +37,7 @@ const Header = () => {
         <li onClick={() => {setMenuDisplay(!menuDisplay)}}>
           <button className='hamburger'>Hamburger</button>
         </li>
-        <li>
+        <li className='logo'>
           <NavLink to='/'><img src={Logo} alt='' /></NavLink>
         </li>
         <li className='computerMenu'>
@@ -47,30 +55,3 @@ const Header = () => {
 }
 
 export default Header;
-
-/* <ul>
-    <li>
-      <div className='hamburger' onClick={() => {
-        setMenuDisplay(!menuDisplay)
-      }}>
-        <button>==</button>
-      </div>
-    </li>
-    <li className='logo'>
-      <NavLink to="/">
-        <img src={Logo}/>
-      </NavLink>
-    </li>
-    <li>
-      <div className={`menu menuDisplay ${menuDisplay ? 'active' : 'inactive'}`}>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="menu">Menu</NavLink></li>
-        <li><NavLink to="chefs">Chefs</NavLink></li>
-        <li><NavLink to="specials">Specials</NavLink></li>
-      </div>
-    </li>
-    <li>
-      <button>|||</button>
-    </li>
-  </ul>
-*/

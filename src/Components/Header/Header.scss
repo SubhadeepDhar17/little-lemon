@@ -1,33 +1,39 @@
 ul {
+    background-color: #183818;
     display: flex;
     justify-content: space-between;
     list-style: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 0rem;
+    padding: 0rem;
+    .logo {
+        margin: 1.3rem auto;
+    }
     .computerMenu {
-        visibility: 0;
+        visibility: hidden;
         position: absolute;
-        transform: translateX(-200px);
-        display: flex;
-        a {
-            margin: 10px;
-            color: #1f1f1f;
-        }
+        transform: translateX(-500px);
     }
     button {
         position: static;
         border-radius: 12px;
         border: 1px solid #1f1f1f;
-        margin: 10px;
+        margin: 2rem 1rem;
     }
-    @media all and (min-width: 600px) {
+    @media all and (min-width: 900px) {
         .computerMenu {
+            display: flex;
             visibility: visible;
             position: static;
             transform: translateX(0px);
+            margin: 2rem;
+            a {
+                margin: 0.8rem;
+                color: #cfcfcf;
+                margin-right: 5rem;
+            }
         }
         button {
-            visibility: 0;
+            visibility: hidden;
             position: absolute;
         }
         .hamburger {
@@ -47,76 +53,24 @@ ul {
     text-align: center;
     list-style: none;
     background-color: #1f1f1f;
-    opacity: 0.8;
     padding: 1px;
     &.inactive {
         visibility: hidden;
         transform: translateX(-800px);
         transition: 1s ease;
+        opacity: 0.3;
     }
     &.active {
         visibility: visible;
         transform: translateX(0px);
         transition: 1s ease;
+        opacity: 0.8;
     }
     a {
-        margin: 0px;
+        margin: 0rem;
         font-family: sans-serif;
         font-weight: 800;
         color: #f1f1f1;
         text-decoration: none;
     }
 }
-
-
-
-/*ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    div {
-        display: flex;
-        margin-left: 20px;
-        margin-right: 30px;
-        li {
-            margin: 10px 20px;
-        }
-    }
-    .menu {
-        position: absolute;
-        float: left;
-        flex-direction: column;
-        background-color: aqua;
-        text-align: center;
-    }
-    .menuDisplay.inactive {
-        visibility: 0;
-        transform: translateX(0px);
-        transition: 1s ease;
-    }
-    .menuDisplay.active {
-        transform: translateX(0px);
-        transition: 1s ease;
-    }
-    @media screen and (min-width: 1200px) {
-        .menu {
-            position: static;
-            flex-direction: row;
-            background-color: bisque;
-            height: 0vh;
-            width: 0vw;
-        }
-        .menuDisplay.inactive {
-            visibility: visible;
-            transform: translateX(0px);
-        }
-        .menuDisplay.active {
-            transform: translateX(0px);
-        }
-        button {
-            visibility: hidden;
-        }
-    }
-}
-*/
-
