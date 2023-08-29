@@ -1,3 +1,73 @@
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    .computerMenu {
+        visibility: 0;
+        position: absolute;
+        transform: translateX(-200px);
+        display: flex;
+        a {
+            margin: 10px;
+            color: #1f1f1f;
+        }
+    }
+    button {
+        position: static;
+        border-radius: 12px;
+        border: 1px solid #1f1f1f;
+        margin: 10px;
+    }
+    @media all and (min-width: 600px) {
+        .computerMenu {
+            visibility: visible;
+            position: static;
+            transform: translateX(0px);
+        }
+        button {
+            visibility: 0;
+            position: absolute;
+        }
+        .hamburger {
+            visibility: 0;
+            transform: translateX(-100px);
+        }
+        .basket {
+            transform: translateX(-1800px);
+        }
+    }
+}
+
+.mobileMenu {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    list-style: none;
+    background-color: #1f1f1f;
+    opacity: 0.8;
+    padding: 1px;
+    &.inactive {
+        visibility: hidden;
+        transform: translateX(-800px);
+        transition: 1s ease;
+    }
+    &.active {
+        visibility: visible;
+        transform: translateX(0px);
+        transition: 1s ease;
+    }
+    a {
+        margin: 0px;
+        font-family: sans-serif;
+        font-weight: 800;
+        color: #f1f1f1;
+        text-decoration: none;
+    }
+}
+
 
 
 /*ul {

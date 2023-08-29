@@ -1,10 +1,7 @@
 import React, { useState} from 'react';
 import './Header.scss';
 import Logo from '../../icons_assets/Logo.svg';
-import { Link, NavLink } from 'react-router-dom';
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-
-
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
 
@@ -29,17 +26,22 @@ const Header = () => {
   return (
     <>
       <ul>
-        <li>
-          <button>Hamberger</button>
+        <li onClick={() => {setMenuDisplay(!menuDisplay)}}>
+          <button className='hamburger'>Hamburger</button>
         </li>
         <li>
-          <img src={Logo} />
+          <NavLink to='/'><img src={Logo} alt='' /></NavLink>
         </li>
-        <li>{MenuDisplay}</li>
+        <li className='computerMenu'>
+          {MenuDisplay}
+        </li>
         <li>
-          <button>Basket</button>
+          <button className='basket'>Basket</button>
         </li>
       </ul>
+      <div className={`mobileMenu ${menuDisplay ? 'active' : 'inactive'}`}>
+        {MenuDisplay}
+      </div>
     </>
   )
 }
