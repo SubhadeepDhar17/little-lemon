@@ -10,7 +10,7 @@ const Header = () => {
   const Menu = [
     {
       name: 'Home',
-      to: '/'
+      to: '/',
     },
     {
       name: 'Menu',
@@ -47,7 +47,7 @@ const Header = () => {
           <button className='basket'>Basket</button>
         </li>
       </ul>
-      <div className={`mobileMenu ${menuDisplay ? 'active' : 'inactive'}`}>
+      <div className={`mobileMenu ${menuDisplay ? 'active' : 'inactive'}`} onClick={() => setMenuDisplay(false)}>
         {MenuDisplay}
       </div>
     </>
