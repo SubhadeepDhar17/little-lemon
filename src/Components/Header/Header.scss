@@ -1,23 +1,44 @@
 ul {
-    background-color: #183818;
+    background-color: #323e2d;
+    li {
+        margin-top: 0.7rem;
+    }
+    a {
+        text-decoration: none;
+        font-family: sans-serif;
+    }
     display: flex;
     justify-content: space-between;
     list-style: none;
     margin: 0rem;
     padding: 0rem;
     .logo {
-        margin: 1.3rem auto;
+        margin: 2rem auto;
     }
     .computerMenu {
         visibility: hidden;
         position: absolute;
         transform: translateX(-500px);
     }
-    button {
+    .basket {
         position: static;
-        border-radius: 12px;
-        border: 1px solid #1f1f1f;
-        margin: 2rem 1rem;
+        background: none;
+        cursor: pointer;
+        margin: 1rem 2rem;
+    }
+    .hamburger {
+        position: static;
+        cursor: pointer;
+        margin: 1.8rem 2rem;
+        &.active {
+            visibility: visible;
+            transform: rotateZ(90deg);
+            transition: 0.8s ease;
+        }
+        &.inactive {
+            visibility: visible;
+            transition: 0.8s ease;
+        }
     }
     @media all and (min-width: 900px) {
         .computerMenu {
@@ -33,12 +54,11 @@ ul {
             }
         }
         button {
-            visibility: hidden;
+            visibility: visible;
             position: absolute;
         }
-        .hamburger {
-            visibility: 0;
-            transform: translateX(-100px);
+        .hamburgerLI {
+            transform: translateX(-1400px);
         }
         .basket {
             transform: translateX(-1800px);
@@ -52,11 +72,10 @@ ul {
     height: 100vh;
     text-align: center;
     list-style: none;
-    background-color: #1f1f1f;
-    padding: 1px;
+    background-color: #323e2d;
     &.inactive {
         visibility: hidden;
-        transform: translateX(-1000px);
+        transform: translateX(-1600px);
         transition: 1s ease;
         opacity: 0.3;
     }
@@ -64,13 +83,15 @@ ul {
         visibility: visible;
         transform: translateX(0px);
         transition: 1s ease;
-        opacity: 0.8;
+        opacity: 1;
     }
-    
+    li {
+        margin: 5rem auto;
+    }
     a {
         margin: 0rem;
         font-family: sans-serif;
-        font-weight: 800;
+        font-weight: 400;
         color: #f1f1f1;
         text-decoration: none;
     }
