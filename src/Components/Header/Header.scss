@@ -1,12 +1,5 @@
 ul {
-    background-color: #323e2d;
-    li {
-        margin-top: 0.7rem;
-    }
-    a {
-        text-decoration: none;
-        font-family: sans-serif;
-    }
+    background-color: #f1f1f1;
     display: flex;
     justify-content: space-between;
     list-style: none;
@@ -24,20 +17,20 @@ ul {
         position: static;
         background: none;
         cursor: pointer;
-        margin: 1rem 2rem;
+        margin: 1.6rem 2rem;
     }
     .hamburger {
         position: static;
         cursor: pointer;
-        margin: 1.8rem 2rem;
+        margin: 2.3rem 2rem;
         &.active {
             visibility: visible;
             transform: rotateZ(90deg);
-            transition: 0.8s ease;
+            transition: 0.5s ease;
         }
         &.inactive {
             visibility: visible;
-            transition: 0.8s ease;
+            transition: 0.5s ease;
         }
     }
     @media all and (min-width: 900px) {
@@ -47,10 +40,20 @@ ul {
             position: static;
             transform: translateX(0px);
             margin: 2rem;
+            li {
+                margin-top: 0.7rem;
+            }
             a {
                 margin: 0.8rem;
-                color: #cfcfcf;
                 margin-right: 5rem;
+                font-weight: 600;
+                color: #2e2e2e;
+                text-decoration: none;
+                font-family: sans-serif;
+                &:hover {
+                    opacity: 0.5;
+                    transition: 0.5s;
+                }
             }
         }
         button {

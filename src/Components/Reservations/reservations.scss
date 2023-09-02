@@ -1,0 +1,64 @@
+
+form {
+    background-color: #3f554a;
+    border-radius: 1.5rem;
+    padding: 3rem;
+    display: grid;
+    max-width: 20rem;
+    margin: 3rem auto;
+    h1 {
+        margin: 0;
+        text-align: center;
+        color: #e9d207;
+    }
+    label {
+        margin-top: 3rem;
+        margin-bottom: 0.5rem;
+        color: #fff;
+        font-size: 1.2rem;
+    }
+    input[type=date], input[type=number] {
+        height: 1.5rem;
+        border-radius: 1rem;
+        padding-left: 1rem;
+        border: none;
+    }
+    select {
+        height: 1.8rem;
+        border-radius: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border: none;
+    }
+    .submit {
+        margin-top: 3rem;
+        width: 14rem;
+        border-radius: 1.5rem;
+        font-weight: 600;
+        font-family: verdana;
+        background-color: #e9d207;
+        border: none;
+        padding: 1rem;
+        text-align: center;
+
+        &:hover:enabled {
+            color: #e9d207;
+            background-color: black;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+    }
+    .confirm {
+        color: #fff;
+        h2:first-child {
+            margin-top: 2rem;
+        }
+        h2 {
+            margin: 0;
+            font-size: 1rem;
+        }
+        p {
+            margin: 0;
+        }
+    }
+}
