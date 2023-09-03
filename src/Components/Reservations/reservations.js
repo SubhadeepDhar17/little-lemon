@@ -1,7 +1,5 @@
 import { useState } from "react";
 import './reservations.scss';
-import Details from "../Details/details";
-import { Link } from "react-router-dom";
 
 const Reservations = () => {
 
@@ -55,7 +53,7 @@ const Reservations = () => {
                 <input
                     type="number"
                     name="guests"
-                    placeholder="1"
+                    placeholder="1 to 10"
                     min="1"
                     max="10"
                     id="guests"
@@ -68,16 +66,13 @@ const Reservations = () => {
                     <option>Anniversary</option>
                 </select>
                 <input className="submit" type="submit" value="Confirm Booking" onClick={submitBtn} disabled={!state.date}/>
-                <Link to='/details'>
-                    <input className="submit" type="submit" value="Back" />
-                </Link>
                 {confirm && state.date !== NaN ? (
-                <div className="confirm">
-                <h2>Booking ID: LLM0601{Math.floor(Math.random() * 100)}</h2>
-                <h2>Booking confirmed for {state.fName} on {state.date} at {state.time} for {state.guests} people.</h2>
-                <p>Email us at @support.littlelemon for making any changes</p>
-                </div>
-                )
+                    <div className="confirm">
+                    <h2>Booking ID: LLM0601{Math.floor(Math.random() * 100)}</h2>
+                    <h2>Booking confirmed on {state.date} at {state.time} for {state.guests} people.</h2>
+                    <p>Email us at @support.littlelemon for making any changes</p>
+                    </div>
+                    )
                 : null}
             </form>
         </>

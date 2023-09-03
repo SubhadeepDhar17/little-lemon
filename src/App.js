@@ -4,7 +4,7 @@ import Layout from './Components/Layout/Layout';
 import Menu from './Components/Menu/Menu';
 import Chefs from './Components/Chefs/Chefs';
 import Body from './Components/Body/Body';
-import Details from './Components/Details/details';
+import Details from './Components/Reservations/details';
 import Reservations from './Components/Reservations/reservations';
 
 function App() {

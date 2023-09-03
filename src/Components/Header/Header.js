@@ -38,7 +38,7 @@ const Header = () => {
       <ul>
         <li className='hamburgerLI' onClick={() => {setMenuDisplay(!menuDisplay)}}>
           <div className={`hamburger ${menuDisplay ? 'active' : 'inactive'}`}>
-            <img src={Hamburger} />
+            <img src={Hamburger} alt=''/>
           </div>
         </li>
         <li className='logo'>
@@ -49,7 +49,7 @@ const Header = () => {
         </li>
         <li>
           <div className='basket'>
-            <img src={Basket} />
+            <img src={Basket} alt=''/>
           </div>
         </li>
       </ul>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import '../Reservations/reservations.scss';
+import './reservations.scss';
 
 const Details = () => {
 
@@ -61,11 +61,11 @@ const Details = () => {
                 onChange={handleInputChange}
             />
             <Link to='/reservations'>
-            <input className="submit"
-                type="submit"
-                value="NEXT ->"
-                disabled={!state.email}
-            />
+                <input className="submit"
+                    type="submit"
+                    value="NEXT ->"
+                    disabled={!state.email}
+                />
             </Link>
         </form>
         </>
