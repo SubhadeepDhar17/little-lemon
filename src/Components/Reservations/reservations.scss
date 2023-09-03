@@ -3,6 +3,7 @@ form {
     background-color: #3f554a;
     border-radius: 1.5rem;
     padding: 3rem;
+    margin: 1rem;
     display: grid;
     max-width: 20rem;
     margin: 3rem auto;
@@ -10,35 +11,48 @@ form {
         margin: 0;
         text-align: center;
         color: #e9d207;
+        font-family: Arial, Helvetica, sans-serif;
     }
     label {
         margin-top: 3rem;
         margin-bottom: 0.5rem;
         color: #fff;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
-    input[type=date], input[type=number] {
-        height: 1.5rem;
-        border-radius: 1rem;
-        padding-left: 1rem;
-        border: none;
-    }
-    select {
-        height: 1.8rem;
-        border-radius: 1rem;
+    input {
+        height: 2.2rem;
+        border-radius: 0.4rem;
         padding-left: 1rem;
         padding-right: 1rem;
         border: none;
+        background-color: #bdcdc5;
+        box-shadow: 0px 5px 10px #183225;
+        &:hover {
+            transition: 0.5s ease;
+            cursor: pointer;
+        }
     }
-    .submit {
-        margin-top: 3rem;
-        width: 14rem;
+    select {
+        height: 2.2rem;
+        border-radius: 0.4rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border: none;
+        background-color: #bdcdc5;
+        box-shadow: 0px 5px 10px #183225;
+    }
+    a {
+        width: 10rem;
+    }
+    input[type=submit] {
+        margin-top: 2rem;
+        width: 10rem;
+        height: 3rem;
         border-radius: 1.5rem;
         font-weight: 600;
         font-family: verdana;
         background-color: #e9d207;
         border: none;
-        padding: 1rem;
         text-align: center;
 
         &:hover:enabled {

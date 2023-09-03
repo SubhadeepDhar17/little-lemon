@@ -28,7 +28,7 @@ const Header = () => {
     },
     {
       name: 'Book A Table',
-      to: '/reservations'
+      to: '/details'
     },
   ]
   const MenuDisplay = Menu.map((list) => <li><NavLink to={list.to}>{list.name}</NavLink></li>);

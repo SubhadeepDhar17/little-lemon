@@ -19,7 +19,7 @@ const Body = () => {
                     </p>
                     <img src={HeroImage} alt=''/>
                 </div>
-                <Link to='/reservations'><button>Reserve a table</button></Link>
+                <Link to='/details'><button>Reserve a table</button></Link>
             </div>
             <div className='menuScroll'>
                 <h1>ORDER FOR DELIVERY!</h1>
