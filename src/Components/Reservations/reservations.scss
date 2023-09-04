@@ -1,4 +1,78 @@
 form {
+    max-width: 25rem;
+    background-color: #3b4d3b;
+    color: white;
+    height: fit-content;
+    min-height: 90vh;
+    margin: 3rem auto;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px #1f1f1fa0;
+    h1 {
+        text-align: center;
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+    }
+    .formBox {
+        display: flex;
+        justify-content: space-evenly;
+        padding-bottom: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        li {
+            font-size: 1rem;
+            list-style: none;
+            input[type=text], input[type=email],
+            input[type=date], input[type=tel], input[type=number] {
+                width: 10rem;
+                height: 1.4rem;
+                border-radius: 0.4rem;
+                border: 1px solid transparent;
+                box-shadow: 5px 5px 10px #1f1f1fa0;
+            }
+            select {
+                width: 10.2rem;
+                height: 1.5rem;
+                border-radius: 0.4rem;
+                border: 1px solid transparent;
+                box-shadow: 5px 5px 10px #1f1f1fa0;
+            }
+        }
+    }
+    input[type=submit] {
+        width: 9rem;
+        height: 3rem;
+        font-size: 0.8rem;
+        border-radius: 1.5rem;
+        font-weight: 600;
+        font-family: verdana;
+        background-color: #e9d207;
+        border: none;
+        text-align: center;
+
+        &:hover:enabled {
+            color: #e9d207;
+            background-color: black;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+    }
+    .confirm {
+        color: #fff;
+        h2:first-child {
+            margin-top: 2rem;
+        }
+        h2 {
+            font-size: 1rem;
+            margin: 0;
+            padding: 0 1rem;
+        }
+        p {
+            padding: 1rem;
+        }
+    }
+}
+
+/*form {
     background-color: #3f554a;
     border-radius: 1.5rem;
     padding: 3rem;
@@ -74,4 +148,4 @@ form {
             margin: 0;
         }
     }
-}
+}*/
